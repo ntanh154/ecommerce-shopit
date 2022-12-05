@@ -1,5 +1,7 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrashCan } from "@fortawesome/free-regular-svg-icons";
 
 // import MetaData from "../layout/MetaData";
 
@@ -107,11 +109,14 @@ const Cart = ({ history }) => {
                       </div>
 
                       <div className="col-4 col-lg-1 mt-4 mt-lg-0">
-                        <i
+                        <div
                           id="delete_cart_item"
-                          className="fa fa-trash btn btn-danger"
+                          className="btn btn-danger"
                           onClick={() => removeCartItemHandler(item.product)}
-                        ></i>
+                        >
+                          <FontAwesomeIcon icon={faTrashCan} />
+                        </div>
+
                       </div>
                     </div>
                   </div>

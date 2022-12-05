@@ -2948,12 +2948,18 @@ option {
 }
 
 .eg-product-carde-alpha .eg-porduct-body .eg-product-title {
-    font-weight   : 600;
-    font-size     : 16px;
-    line-height   : 28px;
-    text-transform: capitalize;
-    color         : #00152b;
-    font-family   : var(--praimary-heading-one);
+
+    font-weight       : 600;
+    font-size         : 16px;
+    line-height       : 18px;
+    height            : 36px;
+    text-transform    : capitalize;
+    overflow          : hidden;
+    display           : -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    color             : #00152b;
+    font-family       : var(--praimary-heading-one);
 }
 
 .eg-product-carde-alpha .eg-porduct-body .eg-product-title a {

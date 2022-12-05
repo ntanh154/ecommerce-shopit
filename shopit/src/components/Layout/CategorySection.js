@@ -15,11 +15,11 @@ const CategorySection = () => {
             </div>
           </div>
         </div>
-        <div className="row">
+        <div className="row justify-content-center">
           {category.map((category, idx) => {
             return (
               <div
-                className="col-lg-2 col-md-3 col-sm-6 category-box-alpha shadow-sm"
+                className="col-lg-2 col-md-3 col-sm-6 category-box-alpha shadow-sm mx-2"
                 style={{ borderRadius: "20px" }}
               >
                 <div className="category-icon">

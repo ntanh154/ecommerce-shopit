@@ -124,17 +124,20 @@ footer {
 /* Ratings */
 
 .rating-outer {
-    display    : inline-block;
+    /* display    : inline-block; */
     position   : relative;
     font-family: FontAwesome;
     color      : #fdcc0d;
 }
 
-.rating-outer::before {
-    content: "\f006 \f006 \f006 \f006 \f006";
-}
 
-.rating-inner {
+
+/* .rating-outer::before {
+    content: "\f006 \f006 \f006 \f006 \f006";
+} */
+
+
+/* .rating-inner {
     position   : absolute;
     top        : 0;
     left       : 0;
@@ -146,7 +149,13 @@ footer {
 .rating-inner::before {
     content: "\f005 \f005 \f005 \f005 \f005";
     color  : #f8ce0b;
+} */
+
+.rating-inner {
+    width: 14px;
 }
+
+
 
 .header-right {
     height: 100%;

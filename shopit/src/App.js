@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
 import Header from './components/Layout/Header/Header';
 import Home from './components/Home/Home';
 import Profile from './components/user/Profile';
@@ -27,6 +28,7 @@ import NewCategory from './components/admin/NewCategory';
 import OrdersList from './components/admin/OrdersList';
 import UsersList from './components/admin/UsersList';
 import NoMatch from './components/NoMatch/NoMatch';
+import Footer from './components/Layout/Footer/Footer';
 
 import { loadUser } from "./actions/userActions";
 import store from "./store";
@@ -62,7 +64,7 @@ function App() {
     <>
       <div className="App">
         <Header />
-        <div className="container" style={{ marginTop: '100px' }}>
+        <div className="" style={{ marginTop: '100px' }}>
           <Switch>
             <Route path="/" component={Home} exact />
             <Route path="/login" component={UsePage} exact />
@@ -144,6 +146,7 @@ function App() {
               <NoMatch />
             </Route> */}
           </Switch>
+          <Footer />
         </div>
 
 

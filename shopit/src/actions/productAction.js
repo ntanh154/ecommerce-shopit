@@ -47,7 +47,6 @@ export const getProducts =
                 }
                 let data = {}
                 await axios.get(link).then(res => data = res);
-                console.log(data)
                 dispatch({
                     type: ALL_PRODUCTS_SUCCESS,
                     payload: data,

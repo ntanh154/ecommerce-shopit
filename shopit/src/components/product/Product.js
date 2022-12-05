@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-regular-svg-icons";
 
 const Product = ({ product, col }) => {
     return (
@@ -35,10 +37,11 @@ const Product = ({ product, col }) => {
                             <ul className="product-rating">
                                 <div className="ratings mt-auto">
                                     <div className="rating-outer">
-                                        <div
-                                            className="rating-inner"
-                                            style={{ width: `${(product.ratings / 5) * 100}%` }}
-                                        ></div>
+                                        <FontAwesomeIcon icon={faStar} className="rating-inner" />
+                                        <FontAwesomeIcon icon={faStar} className="rating-inner" />
+                                        <FontAwesomeIcon icon={faStar} className="rating-inner" />
+                                        <FontAwesomeIcon icon={faStar} className="rating-inner" />
+                                        <FontAwesomeIcon icon={faStar} className="rating-inner" />
                                     </div>
                                     <span id="no_of_reviews">
                                         ({product.numOfReviews} Reviews)

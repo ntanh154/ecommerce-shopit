@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import { Carousel } from "react-bootstrap";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-regular-svg-icons";
 import Loader from "../Layout/Loader/Loader";
 // import MetaData from "../layout/MetaData";
 import ListReviews from "../review/ListReviews";
@@ -169,10 +170,11 @@ const ProductDetails = ({ match }) => {
                   <div className="prod-details-content">
                     <ul className="product-review2 d-flex flex-row align-items-center mb-25">
                       <div className="rating-outer">
-                        <div
-                          className="rating-inner"
-                          style={{ width: `${(product.ratings / 5) * 100}%` }}
-                        ></div>
+                        <FontAwesomeIcon icon={faStar} className="rating-inner" />
+                        <FontAwesomeIcon icon={faStar} className="rating-inner" />
+                        <FontAwesomeIcon icon={faStar} className="rating-inner" />
+                        <FontAwesomeIcon icon={faStar} className="rating-inner" />
+                        <FontAwesomeIcon icon={faStar} className="rating-inner" />
                       </div>
                       <li>
                         <a href="#" className="review-no"></a> (
@@ -199,12 +201,12 @@ const ProductDetails = ({ match }) => {
                         >
                           <button
                             onClick={increaseQty}
-                            style={{ border: "none", background: "none" }}
+                            style={{ border: "none", background: "none", padding: "0 6px" }}
                           >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
-                              width="7"
-                              height="7"
+                              width="10"
+                              height="10"
                               fill="currentColor"
                               className="bi bi-chevron-up"
                               viewBox="0 0 16 16"
@@ -217,12 +219,12 @@ const ProductDetails = ({ match }) => {
                           </button>
                           <button
                             onClick={decreaseQty}
-                            style={{ border: "none", background: "none" }}
+                            style={{ border: "none", background: "none", padding: "0 6px" }}
                           >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
-                              width="7"
-                              height="7"
+                              width="10"
+                              height="10"
                               fill="currentColor"
                               className="bi bi-chevron-down"
                               viewBox="0 0 16 16"

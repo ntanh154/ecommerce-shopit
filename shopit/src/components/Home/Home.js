@@ -2,7 +2,7 @@ import React, { Fragment, useState, useEffect } from "react";
 import Pagination from "react-js-pagination";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import MetaData from "./layout/MetaData";
 import Product from "../product/Product";
 import Loader from "../Layout/Loader/Loader";
@@ -13,6 +13,7 @@ import { getCategory } from "../../actions/categoryActions";
 import Banner from "../Layout/Banner";
 import { useLocation } from "react-router-dom";
 import CategorySection from "../Layout/CategorySection";
+import { faStar } from "@fortawesome/free-regular-svg-icons";
 // import Features from "./layout/Features";
 
 const { createSliderWithTooltip } = Slider;
@@ -50,6 +51,7 @@ const Home = ({ match }) => {
         setCurrentPage(pageNumber);
     }
 
+    console.log(products)
     let count = productsCount;
     if (keyword) {
         count = filteredProductsCount;
@@ -129,6 +131,8 @@ const Home = ({ match }) => {
 
                                                 <ul className="pl-0">
                                                     {category.map((category) => (
+
+
                                                         <li
                                                             style={{
                                                                 cursor: "pointer",
@@ -159,12 +163,7 @@ const Home = ({ match }) => {
                                                             onClick={() => setRating(star)}
                                                         >
                                                             <div className="rating-outer">
-                                                                <div
-                                                                    className="rating-inner"
-                                                                    style={{
-                                                                        width: `${star * 20}%`,
-                                                                    }}
-                                                                ></div>
+                                                                <FontAwesomeIcon icon={faStar} />
                                                             </div>
                                                         </li>
                                                     ))}
